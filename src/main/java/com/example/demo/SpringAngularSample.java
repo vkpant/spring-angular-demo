@@ -11,12 +11,12 @@ import javax.annotation.PostConstruct;
 import java.util.Arrays;
 
 @SpringBootApplication
-public class BootDemoApplication {
+public class SpringAngularSample {
 	@Autowired
 	UserRepository userRepository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(BootDemoApplication.class, args);
+		SpringApplication.run(SpringAngularSample.class, args);
 	}
 
 	@PostConstruct

@@ -14,23 +14,13 @@ import com.example.demo.service.UserService;
 import com.example.demo.utils.Constants;
 
 /**
- * Created by ashish on 13/5/17.
+ * .https://dzone.com/articles/java-8-springboot-angularjs-bootstrap-springdata-j
  */
 @RequestMapping("/user")
 @RestController
-public class UserController {
+public class EditUserController {
 	@Autowired
 	UserService userService;
-
-	@RequestMapping(Constants.GET_USER_BY_ID)
-	public UserDto getUserById(@PathVariable Integer userId) {
-		return userService.getUserById(userId);
-	}
-	
-	@RequestMapping(Constants.GET_ALL_USERS)
-	public List<UserDto> getAllUsers() {
-		return userService.getAllUsers();
-	}
 	
 	@RequestMapping(value= Constants.SAVE_USER, method= RequestMethod.POST)
 	public void saveUser(@RequestBody UserDto userDto) {
